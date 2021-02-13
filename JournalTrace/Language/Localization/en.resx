@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="countall" xml:space="preserve">
+    <value>Quantity of entries:</value>
+  </data>
+  <data name="countdirectories" xml:space="preserve">
+    <value>Directories:</value>
+  </data>
+  <data name="countfiles" xml:space="preserve">
+    <value>Files:</value>
+  </data>
+  <data name="countfirst" xml:space="preserve">
+    <value>Oldest entry:</value>
+  </data>
+  <data name="datagrid" xml:space="preserve">
+    <value>Data Grid</value>
+  </data>
+  <data name="date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="directory" xml:space="preserve">
+    <value>Directory</value>
+  </data>
+  <data name="directorytree" xml:space="preserve">
+    <value>Directory Tree</value>
+  </data>
+  <data name="drive" xml:space="preserve">
+    <value>Drive</value>
+  </data>
+  <data name="export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="file" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="format" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="formdrive" xml:space="preserve">
+    <value>Drive selection</value>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="reason" xml:space="preserve">
+    <value>Reason</value>
+  </data>
+  <data name="root" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="scan" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="statusdesc0" xml:space="preserve">
+    <value>Please select the desired drive and start filtering journal entries.</value>
+  </data>
+  <data name="statusdesc1" xml:space="preserve">
+    <value>To query the journal, we have to make sure we can create handles to it without problems.</value>
+  </data>
+  <data name="statusdesc2" xml:space="preserve">
+    <value>We need to query the current state of the journal to get it's values.</value>
+  </data>
+  <data name="statusdesc3" xml:space="preserve">
+    <value>Calling DeviceIoControl to give us all the entries in the current journal ID.</value>
+  </data>
+  <data name="statusdesc4" xml:space="preserve">
+    <value>File ID's aren't human readable paths, so we need to resolve all the possible ones.</value>
+  </data>
+  <data name="statusdesc5" xml:space="preserve">
+    <value>Parsing all journal entries into classes that we will modify and query later.</value>
+  </data>
+  <data name="statusdesc6" xml:space="preserve">
+    <value>Select a layout type to view the collected data. Each will visualize data on a different way.</value>
+  </data>
+  <data name="statusgrid0" xml:space="preserve">
+    <value>Parsing journal entries to rows...</value>
+  </data>
+  <data name="statusgrid1" xml:space="preserve">
+    <value>Adding rows to control...</value>
+  </data>
+  <data name="statustitle0" xml:space="preserve">
+    <value>Waiting input...</value>
+  </data>
+  <data name="statustitle1" xml:space="preserve">
+    <value>Getting handle to volume...</value>
+  </data>
+  <data name="statustitle2" xml:space="preserve">
+    <value>Getting current journal state...</value>
+  </data>
+  <data name="statustitle3" xml:space="preserve">
+    <value>Querying journal entries...</value>
+  </data>
+  <data name="statustitle4" xml:space="preserve">
+    <value>Resolving file ID's...</value>
+  </data>
+  <data name="statustitle5" xml:space="preserve">
+    <value>Parsing entries...</value>
+  </data>
+  <data name="statustitle6" xml:space="preserve">
+    <value>All done!</value>
+  </data>
+  <data name="totalfreespace" xml:space="preserve">
+    <value>Total free space</value>
+  </data>
+  <data name="totalsize" xml:space="preserve">
+    <value>Total size</value>
+  </data>
+  <data name="type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+</root>
