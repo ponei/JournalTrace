@@ -373,9 +373,9 @@ namespace JournalTrace.Native
         public struct BY_HANDLE_FILE_INFORMATION
         {
             public uint FileAttributes;
-            public FILETIME CreationTime;
-            public FILETIME LastAccessTime;
-            public FILETIME LastWriteTime;
+            public System.Runtime.InteropServices.ComTypes.FILETIME CreationTime;
+            public System.Runtime.InteropServices.ComTypes.FILETIME LastAccessTime;
+            public System.Runtime.InteropServices.ComTypes.FILETIME LastWriteTime;
             public uint VolumeSerialNumber;
             public uint FileSizeHigh;
             public uint FileSizeLow;

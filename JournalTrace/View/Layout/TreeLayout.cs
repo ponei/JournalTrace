@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using JournalTrace.Entry;
 using JournalTrace.Language;
+using JournalTrace.View.Util;
 
 namespace JournalTrace.View.Layout
 {
@@ -109,6 +110,11 @@ namespace JournalTrace.View.Layout
         private void TreeLayout_Resize(object sender, EventArgs e)
         {
 
+        }
+
+        private void datagDirectoryChanges_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ContextMenuHelper.INSTANCE.ShowContext(datagDirectoryChanges, e);
         }
     }
 }

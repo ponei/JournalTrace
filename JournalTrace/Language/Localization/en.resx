@@ -120,6 +120,9 @@
   <data name="clear" xml:space="preserve">
     <value>Clear</value>
   </data>
+  <data name="copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
   <data name="countall" xml:space="preserve">
     <value>Quantity of entries:</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="countfirst" xml:space="preserve">
     <value>Oldest entry:</value>
+  </data>
+  <data name="currentfile" xml:space="preserve">
+    <value>Current file</value>
   </data>
   <data name="datagrid" xml:space="preserve">
     <value>Data Grid</value>
@@ -147,17 +153,35 @@
   <data name="drive" xml:space="preserve">
     <value>Drive</value>
   </data>
+  <data name="enterdir" xml:space="preserve">
+    <value>Enter entry directory</value>
+  </data>
+  <data name="entryinfo" xml:space="preserve">
+    <value>Show file information</value>
+  </data>
   <data name="export" xml:space="preserve">
     <value>Export</value>
   </data>
   <data name="file" xml:space="preserve">
     <value>File</value>
   </data>
+  <data name="filedeleted" xml:space="preserve">
+    <value>File was deleted</value>
+  </data>
+  <data name="fileid" xml:space="preserve">
+    <value>File Identification</value>
+  </data>
   <data name="format" xml:space="preserve">
     <value>Format</value>
   </data>
   <data name="formdrive" xml:space="preserve">
     <value>Drive selection</value>
+  </data>
+  <data name="formentryinfo" xml:space="preserve">
+    <value>Entry information</value>
+  </data>
+  <data name="info" xml:space="preserve">
+    <value>Information</value>
   </data>
   <data name="language" xml:space="preserve">
     <value>Language</value>
@@ -179,6 +203,21 @@
   </data>
   <data name="select" xml:space="preserve">
     <value>Select</value>
+  </data>
+  <data name="statusdesc-1" xml:space="preserve">
+    <value>The program couldn't create a handle to the selected drive, to query the current journal state.</value>
+  </data>
+  <data name="statusdesc-2" xml:space="preserve">
+    <value>The program couldn't query the current state of the journal. Make sure the selected drive has journaling enabled.</value>
+  </data>
+  <data name="statusdesc-3" xml:space="preserve">
+    <value>The program couldn't call DeviceIoControl properly to return all the journal entries in the drive.</value>
+  </data>
+  <data name="statusdesc-4" xml:space="preserve">
+    <value>The program couldn't resolve file ID's properly. Is something blocking the program?</value>
+  </data>
+  <data name="statusdesc-5" xml:space="preserve">
+    <value>The program couldn't parse journal entries correctly. This could be the program's fault.</value>
   </data>
   <data name="statusdesc0" xml:space="preserve">
     <value>Please select the desired drive and start filtering journal entries.</value>
@@ -206,6 +245,21 @@
   </data>
   <data name="statusgrid1" xml:space="preserve">
     <value>Adding rows to control...</value>
+  </data>
+  <data name="statustitle-1" xml:space="preserve">
+    <value>Couldn't get handle to volume.</value>
+  </data>
+  <data name="statustitle-2" xml:space="preserve">
+    <value>Couldn't get current journal state.</value>
+  </data>
+  <data name="statustitle-3" xml:space="preserve">
+    <value>Couldn't query journal entries.</value>
+  </data>
+  <data name="statustitle-4" xml:space="preserve">
+    <value>Couldn't resolve ID's.</value>
+  </data>
+  <data name="statustitle-5" xml:space="preserve">
+    <value>Couldn't parse entries.</value>
   </data>
   <data name="statustitle0" xml:space="preserve">
     <value>Waiting input...</value>

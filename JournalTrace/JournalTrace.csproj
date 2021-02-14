@@ -65,11 +65,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>pt.resx</DependentUpon>
     </Compile>
+    <Compile Include="View\FormInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormInfo.Designer.cs">
+      <DependentUpon>FormInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Util\ContextMenuHelper.cs" />
     <Compile Include="View\FormDrive.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormDrive.Designer.cs">
       <DependentUpon>FormDrive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormEntryInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormEntryInfo.Designer.cs">
+      <DependentUpon>FormEntryInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormMain.cs">
       <SubType>Form</SubType>
@@ -108,6 +121,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormDrive.resx">
       <DependentUpon>FormDrive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormEntryInfo.resx">
+      <DependentUpon>FormEntryInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormInfo.resx">
+      <DependentUpon>FormInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

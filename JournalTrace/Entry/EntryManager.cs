@@ -42,7 +42,16 @@ namespace JournalTrace.Entry
             this.selectedVolume = newVolume;
         }
 
+        //used for datagrid cell selection
+        public long SelectedUSN;
+
+
+
+
+
+        //used for getting the oldest usn date, shows on main form
         public long OldestUSN;
+
         public Win32Api.USN_JOURNAL_DATA usnCurrentJournalState;
         private NtfsUsnJournal usnJournal = null;
 

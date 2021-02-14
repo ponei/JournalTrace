@@ -138,20 +138,26 @@ namespace JournalTrace.Language
 
         public void AddLocalizableControls(object ctrl)
         {
-            //MessageBox.Show(ctrl.ToString());
-            AddObjectIfPossible(ctrl);
-            if (ctrl is Control)
+            if (ctrl is ToolStrip)
             {
-                Control cControl = ctrl as Control;
-                foreach (Control child in cControl.Controls)
+                GetChildrenOfMenu(ctrl as ToolStrip);
+            }
+            else
+            {
+                AddObjectIfPossible(ctrl);
+                if (ctrl is Control)
                 {
-                    if (child is MenuStrip)
+                    Control cControl = ctrl as Control;
+                    foreach (Control child in cControl.Controls)
                     {
-                        GetChildrenOfMenu(child as MenuStrip);
-                    }
-                    else
-                    {
-                        AddLocalizableControls(child);
+                        if (child is ToolStrip)
+                        {
+                            GetChildrenOfMenu(child as ToolStrip);
+                        }
+                        else
+                        {
+                            AddLocalizableControls(child);
+                        }
                     }
                 }
             }
@@ -186,7 +192,8 @@ namespace JournalTrace.Language
                         if (item.TextArrayToLocalize[i] != null)
                         {
                             newItems[i] = textManager.GetString(item.TextArrayToLocalize[i]);
-                        } else
+                        }
+                        else
                         {
                             newItems[i] = item.ComboBoxToLocalize.Items[i].ToString();
                         }
@@ -198,7 +205,7 @@ namespace JournalTrace.Language
             }
         }
 
-        private void GetChildrenOfMenu(MenuStrip strip)
+        private void GetChildrenOfMenu(ToolStrip strip)
         {
             foreach (ToolStripMenuItem item in strip.Items)
             {

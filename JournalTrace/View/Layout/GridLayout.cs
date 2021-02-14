@@ -4,6 +4,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 using System.Threading.Tasks;
+using JournalTrace.View.Util;
 
 namespace JournalTrace.View.Layout
 {
@@ -74,19 +75,6 @@ namespace JournalTrace.View.Layout
             frm.ShowLayoutOption(true);
         }
 
-        private int OverallLenght()
-        {
-            int i = 0;
-            //foreach (var dir in dirManager.USNDirectories)
-            //{
-            //    foreach (var change in dir.Changes)
-            //    {
-            //        i++;
-            //    }
-            //}
-            return i;
-        }
-
         private void ShowGrid(bool v)
         {
             //lbStatusGrid.Visible = !v;
@@ -95,12 +83,6 @@ namespace JournalTrace.View.Layout
             datagJournalEntries.Visible = v;
         }
 
-        private void GridLayout_Resize(object sender, EventArgs e)
-        {
-            //progbarAction.Location = new Point((Width / 2) - (progbarAction.Width / 2), ((Height) / 2) - progbarAction.Height / 2);
-            //progbarRows.Location = new Point(progbarAction.Location.X, progbarAction.Location.Y + progbarRows.Height + 3);
-            //lbStatusGrid.Location = new Point(0, progbarAction.Location.Y - lbStatusGrid.Height - 3);
-        }
         private void datagJournalEntries_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
         }
@@ -121,6 +103,11 @@ namespace JournalTrace.View.Layout
         private void btSearchClear_Click(object sender, EventArgs e)
         {
             dataSourceEntries.DefaultView.RowFilter = "";
+        }
+
+        private void datagJournalEntries_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ContextMenuHelper.INSTANCE.ShowContext(datagJournalEntries, e);
         }
     }
 }

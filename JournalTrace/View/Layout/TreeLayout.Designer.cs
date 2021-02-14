@@ -30,7 +30,6 @@
         {
             this.datagDirectoryChanges = new System.Windows.Forms.DataGridView();
             this.treeUSNDirectories = new System.Windows.Forms.TreeView();
-            this.progbarTree = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.datagDirectoryChanges)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +46,7 @@
             this.datagDirectoryChanges.RowHeadersVisible = false;
             this.datagDirectoryChanges.Size = new System.Drawing.Size(469, 352);
             this.datagDirectoryChanges.TabIndex = 9;
+            this.datagDirectoryChanges.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagDirectoryChanges_CellMouseDown);
             // 
             // treeUSNDirectories
             // 
@@ -58,19 +58,10 @@
             this.treeUSNDirectories.TabIndex = 8;
             this.treeUSNDirectories.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeUSNDirectories_AfterSelect);
             // 
-            // progbarTree
-            // 
-            this.progbarTree.Location = new System.Drawing.Point(12, 163);
-            this.progbarTree.Name = "progbarTree";
-            this.progbarTree.Size = new System.Drawing.Size(269, 23);
-            this.progbarTree.TabIndex = 11;
-            this.progbarTree.Visible = false;
-            // 
             // TreeLayout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.progbarTree);
             this.Controls.Add(this.datagDirectoryChanges);
             this.Controls.Add(this.treeUSNDirectories);
             this.Name = "TreeLayout";
@@ -85,6 +76,5 @@
 
         private System.Windows.Forms.DataGridView datagDirectoryChanges;
         private System.Windows.Forms.TreeView treeUSNDirectories;
-        private System.Windows.Forms.ProgressBar progbarTree;
     }
 }

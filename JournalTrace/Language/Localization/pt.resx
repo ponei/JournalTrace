@@ -120,6 +120,9 @@
   <data name="clear" xml:space="preserve">
     <value>Limpar</value>
   </data>
+  <data name="copy" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
   <data name="countall" xml:space="preserve">
     <value>Quantidade de entradas:</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="countfirst" xml:space="preserve">
     <value>Entrada mais antiga:</value>
+  </data>
+  <data name="currentfile" xml:space="preserve">
+    <value>Arquivo atual</value>
   </data>
   <data name="datagrid" xml:space="preserve">
     <value>Grade de dados</value>
@@ -147,17 +153,35 @@
   <data name="drive" xml:space="preserve">
     <value>Disco</value>
   </data>
+  <data name="enterdir" xml:space="preserve">
+    <value>Entrar no diretório da entrada</value>
+  </data>
+  <data name="entryinfo" xml:space="preserve">
+    <value>Mostrar informações do arquivo</value>
+  </data>
   <data name="export" xml:space="preserve">
     <value>Exportar</value>
   </data>
   <data name="file" xml:space="preserve">
     <value>Arquivo</value>
   </data>
+  <data name="filedeleted" xml:space="preserve">
+    <value>Arquivo foi deletado</value>
+  </data>
+  <data name="fileid" xml:space="preserve">
+    <value>Identificador do arquivo</value>
+  </data>
   <data name="format" xml:space="preserve">
     <value>Formato</value>
   </data>
   <data name="formdrive" xml:space="preserve">
     <value>Seleção de disco</value>
+  </data>
+  <data name="formentryinfo" xml:space="preserve">
+    <value>Informações da entrada</value>
+  </data>
+  <data name="info" xml:space="preserve">
+    <value>Informação</value>
   </data>
   <data name="language" xml:space="preserve">
     <value>Lingua</value>
@@ -179,6 +203,21 @@
   </data>
   <data name="select" xml:space="preserve">
     <value>Selecionar</value>
+  </data>
+  <data name="statusdesc-1" xml:space="preserve">
+    <value>O programa não conseguiu manejar o disco selecionado, para consultar o estado atual do journal.</value>
+  </data>
+  <data name="statusdesc-2" xml:space="preserve">
+    <value>O programa não conseguiu consultar o estado atual do journal. Certifique-se de que o disco selecionado tenha o journal habilitado.</value>
+  </data>
+  <data name="statusdesc-3" xml:space="preserve">
+    <value>O programa não conseguiu chamar o DeviceIoControl corretamente para retornar todos as entradas do journal do disco.</value>
+  </data>
+  <data name="statusdesc-4" xml:space="preserve">
+    <value>O programa não conseguiu resolver as identificações dos arquivos corretamente. Algo está bloqueando o programa?</value>
+  </data>
+  <data name="statusdesc-5" xml:space="preserve">
+    <value>O programa não conseguiu analisar corretamente as entradas do journal corretamente. Isto pode ser culpa do programa.</value>
   </data>
   <data name="statusdesc0" xml:space="preserve">
     <value>Por favor, selecione o disco desejado e incie a filtragem do journal.</value>
@@ -206,6 +245,21 @@
   </data>
   <data name="statusgrid1" xml:space="preserve">
     <value>Adicionando fileiras à grade...</value>
+  </data>
+  <data name="statustitle-1" xml:space="preserve">
+    <value>Não foi possível manejar o disco selecionado.</value>
+  </data>
+  <data name="statustitle-2" xml:space="preserve">
+    <value>Não foi possível retornar o estado atual do journal.</value>
+  </data>
+  <data name="statustitle-3" xml:space="preserve">
+    <value>Não foi possível consultar as entradas do journal.</value>
+  </data>
+  <data name="statustitle-4" xml:space="preserve">
+    <value>Não foi possível resolver os ID's.</value>
+  </data>
+  <data name="statustitle-5" xml:space="preserve">
+    <value>Não foi possível analisar as entradas.</value>
   </data>
   <data name="statustitle0" xml:space="preserve">
     <value>Aguardando entrada...</value>

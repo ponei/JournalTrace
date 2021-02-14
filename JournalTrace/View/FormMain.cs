@@ -13,6 +13,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using JournalTrace.View.Util;
+using System.Diagnostics;
 
 namespace JournalTrace
 {
@@ -24,8 +26,10 @@ namespace JournalTrace
             entryManager.NextStatusUpdate += EntryManager_NextStatusUpdate;
             entryManager.WorkEnded += EntryManager_WorkEnded;
             progbarStatus.Maximum = statusLenght * 10;
+
         }
 
+        #region entrymanager status update
         private void EntryManager_WorkEnded(object sender, EventArgs e)
         {
             ShowLayoutOption(true);
@@ -50,21 +54,20 @@ namespace JournalTrace
 
         private void NextStatus()
         {
+            LanguageManager.INSTANCE.UpdateLocalizableControlText(lbStatusMain, $"statustitle{statusPhase}");
+            LanguageManager.INSTANCE.UpdateLocalizableControlText(lbStatusDesc, $"statusdesc{statusPhase}");
+
             if (statusPhase > 0)
             {
                 progbarStatus.PerformStep();
-                LanguageManager.INSTANCE.UpdateLocalizableControlText(lbStatusMain, $"statustitle{statusPhase}");
-                LanguageManager.INSTANCE.UpdateLocalizableControlText(lbStatusDesc, $"statusdesc{statusPhase}");
-
             }
             else
             {
-                LanguageManager.INSTANCE.UpdateLocalizableControlText(lbStatusMain, $"statustitleerror");
-                LanguageManager.INSTANCE.UpdateLocalizableControlText(lbStatusDesc, $"statusdescerror");
-                MessageBox.Show(statusPhase.ToString());
+                ShowLayoutOption(true);
+                progbarStatus.Value = 0;
             }
         }
-
+        #endregion
 
         private EntryManager entryManager = new EntryManager();
 
@@ -74,18 +77,16 @@ namespace JournalTrace
         }
 
 
-
-
-
-
-        private void FormTree_Load(object sender, EventArgs e)
+        private void FormMain_Load(object sender, EventArgs e)
         {
             LanguageManager.INSTANCE.AddLocalizableControls(this);
+            LanguageManager.INSTANCE.AddLocalizableControls(cmsEntryInfo);
+            ContextMenuHelper.INSTANCE.SetDependencies(cmsEntryInfo, entryManager);
             RelocateStatusMessage();
         }
 
 
-
+        #region drive (menu)
         FormDrive frmDrive;
         private void selectToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -118,6 +119,7 @@ namespace JournalTrace
                 entryManager.BeginScan();
             });
         }
+        #endregion
 
         public void ShowLayoutOption(bool v)
         {
@@ -318,8 +320,39 @@ namespace JournalTrace
             }
             return i == 1;
         }
+
         #endregion
 
+        private void entryInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEntryInfo frmInfo = new FormEntryInfo(entryManager, ContextMenuHelper.INSTANCE.GetCellUSN());
+            LanguageManager.INSTANCE.AddLocalizableControls(frmInfo);
+            frmInfo.Show();
+            frmInfo.LoadData();
+        }
 
+        private void copyValueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(ContextMenuHelper.INSTANCE.GetCellValue());
+        }
+
+        private void enterDirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("explorer.exe", ContextMenuHelper.INSTANCE.GetCellDirectory());
+        }
+
+        FormInfo frmInfo;
+        private void infoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (frmInfo != null)
+            {
+                if (!frmInfo.IsDisposed) { return; }
+
+            }
+            frmInfo = new FormInfo();
+            LanguageManager.INSTANCE.AddLocalizableControls(frmInfo);
+            frmInfo.Show();
+        }
     }
 }

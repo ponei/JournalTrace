@@ -70,6 +70,15 @@ namespace JournalTrace.Language.Localization {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Copy.
+        /// </summary>
+        internal static string copy {
+            get {
+                return ResourceManager.GetString("copy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Quantity of entries:.
         /// </summary>
         internal static string countall {
@@ -102,6 +111,15 @@ namespace JournalTrace.Language.Localization {
         internal static string countfirst {
             get {
                 return ResourceManager.GetString("countfirst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Current file.
+        /// </summary>
+        internal static string currentfile {
+            get {
+                return ResourceManager.GetString("currentfile", resourceCulture);
             }
         }
         
@@ -151,6 +169,24 @@ namespace JournalTrace.Language.Localization {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Enter entry directory.
+        /// </summary>
+        internal static string enterdir {
+            get {
+                return ResourceManager.GetString("enterdir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Show file information.
+        /// </summary>
+        internal static string entryinfo {
+            get {
+                return ResourceManager.GetString("entryinfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Export.
         /// </summary>
         internal static string export {
@@ -169,6 +205,24 @@ namespace JournalTrace.Language.Localization {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a File was deleted.
+        /// </summary>
+        internal static string filedeleted {
+            get {
+                return ResourceManager.GetString("filedeleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a File Identification.
+        /// </summary>
+        internal static string fileid {
+            get {
+                return ResourceManager.GetString("fileid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Format.
         /// </summary>
         internal static string format {
@@ -183,6 +237,24 @@ namespace JournalTrace.Language.Localization {
         internal static string formdrive {
             get {
                 return ResourceManager.GetString("formdrive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Entry information.
+        /// </summary>
+        internal static string formentryinfo {
+            get {
+                return ResourceManager.GetString("formentryinfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Information.
+        /// </summary>
+        internal static string info {
+            get {
+                return ResourceManager.GetString("info", resourceCulture);
             }
         }
         
@@ -246,6 +318,51 @@ namespace JournalTrace.Language.Localization {
         internal static string select {
             get {
                 return ResourceManager.GetString("select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a The program couldn&apos;t create a handle to the selected drive, to query the current journal state..
+        /// </summary>
+        internal static string statusdesc_1 {
+            get {
+                return ResourceManager.GetString("statusdesc-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a The program couldn&apos;t query the current state of the journal. Make sure the selected drive has journaling enabled..
+        /// </summary>
+        internal static string statusdesc_2 {
+            get {
+                return ResourceManager.GetString("statusdesc-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a The program couldn&apos;t call DeviceIoControl properly to return all the journal entries in the drive..
+        /// </summary>
+        internal static string statusdesc_3 {
+            get {
+                return ResourceManager.GetString("statusdesc-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a The program couldn&apos;t resolve file ID&apos;s properly. Is something blocking the program?.
+        /// </summary>
+        internal static string statusdesc_4 {
+            get {
+                return ResourceManager.GetString("statusdesc-4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a The program couldn&apos;t parse journal entries correctly. This could be the program&apos;s fault..
+        /// </summary>
+        internal static string statusdesc_5 {
+            get {
+                return ResourceManager.GetString("statusdesc-5", resourceCulture);
             }
         }
         
@@ -327,6 +444,51 @@ namespace JournalTrace.Language.Localization {
         internal static string statusgrid1 {
             get {
                 return ResourceManager.GetString("statusgrid1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Couldn&apos;t get handle to volume..
+        /// </summary>
+        internal static string statustitle_1 {
+            get {
+                return ResourceManager.GetString("statustitle-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Couldn&apos;t get current journal state..
+        /// </summary>
+        internal static string statustitle_2 {
+            get {
+                return ResourceManager.GetString("statustitle-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Couldn&apos;t query journal entries..
+        /// </summary>
+        internal static string statustitle_3 {
+            get {
+                return ResourceManager.GetString("statustitle-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Couldn&apos;t resolve ID&apos;s..
+        /// </summary>
+        internal static string statustitle_4 {
+            get {
+                return ResourceManager.GetString("statustitle-4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Couldn&apos;t parse entries..
+        /// </summary>
+        internal static string statustitle_5 {
+            get {
+                return ResourceManager.GetString("statustitle-5", resourceCulture);
             }
         }
         

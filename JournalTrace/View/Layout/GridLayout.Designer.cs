@@ -51,6 +51,7 @@
             this.datagJournalEntries.Size = new System.Drawing.Size(704, 324);
             this.datagJournalEntries.TabIndex = 10;
             this.datagJournalEntries.Visible = false;
+            this.datagJournalEntries.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagJournalEntries_CellMouseDown);
             this.datagJournalEntries.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagJournalEntries_ColumnHeaderMouseClick);
             // 
             // comboSearch
@@ -114,7 +115,6 @@
             this.Controls.Add(this.datagJournalEntries);
             this.Name = "GridLayout";
             this.Size = new System.Drawing.Size(710, 368);
-            this.Resize += new System.EventHandler(this.GridLayout_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.datagJournalEntries)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

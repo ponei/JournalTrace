@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuForm = new System.Windows.Forms.MenuStrip();
             this.driveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +41,7 @@
             this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.portuguêsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbStatusMain = new System.Windows.Forms.Label();
             this.lbStatusDesc = new System.Windows.Forms.Label();
             this.progbarStatus = new System.Windows.Forms.ProgressBar();
@@ -53,8 +54,13 @@
             this.lbCountFilesV = new System.Windows.Forms.Label();
             this.lbCountDirectories = new System.Windows.Forms.Label();
             this.lbCountDirectoriesV = new System.Windows.Forms.Label();
+            this.cmsEntryInfo = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copyValueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entryInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enterDirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuForm.SuspendLayout();
             this.flowpInfo.SuspendLayout();
+            this.cmsEntryInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuForm
@@ -65,7 +71,7 @@
             this.fileToolStripMenuItem,
             this.layoutToolStripMenuItem,
             this.languageToolStripMenuItem,
-            this.debugToolStripMenuItem});
+            this.infoToolStripMenuItem});
             this.menuForm.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuForm.Location = new System.Drawing.Point(0, 0);
             this.menuForm.Name = "menuForm";
@@ -86,7 +92,7 @@
             // selectToolStripMenuItem
             // 
             this.selectToolStripMenuItem.Name = "selectToolStripMenuItem";
-            this.selectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.selectToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.selectToolStripMenuItem.Tag = "select";
             this.selectToolStripMenuItem.Text = "Select";
             this.selectToolStripMenuItem.Click += new System.EventHandler(this.selectToolStripMenuItem_Click);
@@ -94,7 +100,7 @@
             // scanToolStripMenuItem
             // 
             this.scanToolStripMenuItem.Name = "scanToolStripMenuItem";
-            this.scanToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.scanToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.scanToolStripMenuItem.Tag = "scan";
             this.scanToolStripMenuItem.Text = "Scan";
             this.scanToolStripMenuItem.Click += new System.EventHandler(this.scanToolStripMenuItem_Click);
@@ -172,11 +178,13 @@
             this.portuguêsToolStripMenuItem.Text = "Português";
             this.portuguêsToolStripMenuItem.CheckStateChanged += new System.EventHandler(this.portuguêsToolStripMenuItem_CheckStateChanged);
             // 
-            // debugToolStripMenuItem
+            // infoToolStripMenuItem
             // 
-            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.debugToolStripMenuItem.Text = "Debug";
+            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.infoToolStripMenuItem.Tag = "info";
+            this.infoToolStripMenuItem.Text = "Information";
+            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
             // 
             // lbStatusMain
             // 
@@ -195,9 +203,9 @@
             // 
             this.lbStatusDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStatusDesc.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbStatusDesc.Location = new System.Drawing.Point(218, 168);
+            this.lbStatusDesc.Location = new System.Drawing.Point(203, 168);
             this.lbStatusDesc.Name = "lbStatusDesc";
-            this.lbStatusDesc.Size = new System.Drawing.Size(271, 59);
+            this.lbStatusDesc.Size = new System.Drawing.Size(300, 59);
             this.lbStatusDesc.TabIndex = 12;
             this.lbStatusDesc.Tag = "statusdesc0";
             this.lbStatusDesc.Text = "exemplo de desc";
@@ -313,6 +321,38 @@
             this.lbCountDirectoriesV.TabIndex = 6;
             this.lbCountDirectoriesV.Text = "...";
             // 
+            // cmsEntryInfo
+            // 
+            this.cmsEntryInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyValueToolStripMenuItem,
+            this.entryInfoToolStripMenuItem,
+            this.enterDirToolStripMenuItem});
+            this.cmsEntryInfo.Name = "cmsEntryInfo";
+            this.cmsEntryInfo.Size = new System.Drawing.Size(129, 70);
+            // 
+            // copyValueToolStripMenuItem
+            // 
+            this.copyValueToolStripMenuItem.Name = "copyValueToolStripMenuItem";
+            this.copyValueToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.copyValueToolStripMenuItem.Text = "copyvalue";
+            this.copyValueToolStripMenuItem.Click += new System.EventHandler(this.copyValueToolStripMenuItem_Click);
+            // 
+            // entryInfoToolStripMenuItem
+            // 
+            this.entryInfoToolStripMenuItem.Name = "entryInfoToolStripMenuItem";
+            this.entryInfoToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.entryInfoToolStripMenuItem.Tag = "entryinfo";
+            this.entryInfoToolStripMenuItem.Text = "entryinfo";
+            this.entryInfoToolStripMenuItem.Click += new System.EventHandler(this.entryInfoToolStripMenuItem_Click);
+            // 
+            // enterDirToolStripMenuItem
+            // 
+            this.enterDirToolStripMenuItem.Name = "enterDirToolStripMenuItem";
+            this.enterDirToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.enterDirToolStripMenuItem.Tag = "enterdir";
+            this.enterDirToolStripMenuItem.Text = "enterdir";
+            this.enterDirToolStripMenuItem.Click += new System.EventHandler(this.enterDirToolStripMenuItem_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,12 +368,13 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JournalTrace";
-            this.Load += new System.EventHandler(this.FormTree_Load);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.Resize += new System.EventHandler(this.FormMain_Resize);
             this.menuForm.ResumeLayout(false);
             this.menuForm.PerformLayout();
             this.flowpInfo.ResumeLayout(false);
             this.flowpInfo.PerformLayout();
+            this.cmsEntryInfo.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,7 +390,7 @@
         private System.Windows.Forms.ToolStripMenuItem selectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem debugToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.Label lbStatusMain;
         private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
@@ -365,6 +406,10 @@
         private System.Windows.Forms.Label lbCountDirectoriesV;
         private System.Windows.Forms.Label lbCountFirst;
         private System.Windows.Forms.Label lbCountFirstV;
+        private System.Windows.Forms.ContextMenuStrip cmsEntryInfo;
+        private System.Windows.Forms.ToolStripMenuItem copyValueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem entryInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enterDirToolStripMenuItem;
     }
 }
 

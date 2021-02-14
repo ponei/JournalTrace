@@ -70,6 +70,15 @@ namespace JournalTrace.Language.Localization {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Copiar.
+        /// </summary>
+        internal static string copy {
+            get {
+                return ResourceManager.GetString("copy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Quantidade de entradas:.
         /// </summary>
         internal static string countall {
@@ -102,6 +111,15 @@ namespace JournalTrace.Language.Localization {
         internal static string countfirst {
             get {
                 return ResourceManager.GetString("countfirst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Arquivo atual.
+        /// </summary>
+        internal static string currentfile {
+            get {
+                return ResourceManager.GetString("currentfile", resourceCulture);
             }
         }
         
@@ -151,6 +169,24 @@ namespace JournalTrace.Language.Localization {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Entrar no diretório da entrada.
+        /// </summary>
+        internal static string enterdir {
+            get {
+                return ResourceManager.GetString("enterdir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Mostrar informações do arquivo.
+        /// </summary>
+        internal static string entryinfo {
+            get {
+                return ResourceManager.GetString("entryinfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Exportar.
         /// </summary>
         internal static string export {
@@ -169,6 +205,24 @@ namespace JournalTrace.Language.Localization {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Arquivo foi deletado.
+        /// </summary>
+        internal static string filedeleted {
+            get {
+                return ResourceManager.GetString("filedeleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Identificador do arquivo.
+        /// </summary>
+        internal static string fileid {
+            get {
+                return ResourceManager.GetString("fileid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Formato.
         /// </summary>
         internal static string format {
@@ -183,6 +237,24 @@ namespace JournalTrace.Language.Localization {
         internal static string formdrive {
             get {
                 return ResourceManager.GetString("formdrive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Informações da entrada.
+        /// </summary>
+        internal static string formentryinfo {
+            get {
+                return ResourceManager.GetString("formentryinfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Informação.
+        /// </summary>
+        internal static string info {
+            get {
+                return ResourceManager.GetString("info", resourceCulture);
             }
         }
         
@@ -246,6 +318,51 @@ namespace JournalTrace.Language.Localization {
         internal static string select {
             get {
                 return ResourceManager.GetString("select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O programa não conseguiu manejar o disco selecionado, para consultar o estado atual do journal..
+        /// </summary>
+        internal static string statusdesc_1 {
+            get {
+                return ResourceManager.GetString("statusdesc-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O programa não conseguiu consultar o estado atual do journal. Certifique-se de que o disco selecionado tenha o journal habilitado..
+        /// </summary>
+        internal static string statusdesc_2 {
+            get {
+                return ResourceManager.GetString("statusdesc-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O programa não conseguiu chamar o DeviceIoControl corretamente para retornar todos as entradas do journal do disco..
+        /// </summary>
+        internal static string statusdesc_3 {
+            get {
+                return ResourceManager.GetString("statusdesc-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O programa não conseguiu resolver as identificações dos arquivos corretamente. Algo está bloqueando o programa?.
+        /// </summary>
+        internal static string statusdesc_4 {
+            get {
+                return ResourceManager.GetString("statusdesc-4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O programa não conseguiu analisar corretamente as entradas do journal corretamente. Isto pode ser culpa do programa..
+        /// </summary>
+        internal static string statusdesc_5 {
+            get {
+                return ResourceManager.GetString("statusdesc-5", resourceCulture);
             }
         }
         
@@ -327,6 +444,51 @@ namespace JournalTrace.Language.Localization {
         internal static string statusgrid1 {
             get {
                 return ResourceManager.GetString("statusgrid1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não foi possível manejar o disco selecionado..
+        /// </summary>
+        internal static string statustitle_1 {
+            get {
+                return ResourceManager.GetString("statustitle-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não foi possível retornar o estado atual do journal..
+        /// </summary>
+        internal static string statustitle_2 {
+            get {
+                return ResourceManager.GetString("statustitle-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não foi possível consultar as entradas do journal..
+        /// </summary>
+        internal static string statustitle_3 {
+            get {
+                return ResourceManager.GetString("statustitle-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não foi possível resolver os ID&apos;s..
+        /// </summary>
+        internal static string statustitle_4 {
+            get {
+                return ResourceManager.GetString("statustitle-4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não foi possível analisar as entradas..
+        /// </summary>
+        internal static string statustitle_5 {
+            get {
+                return ResourceManager.GetString("statustitle-5", resourceCulture);
             }
         }
         
