@@ -375,7 +375,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "formentryinfo";
             this.Text = "Entry information";
-            this.Load += new System.EventHandler(this.FormEntryInfo_Load);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
             this.flowLayoutPanel5.ResumeLayout(false);

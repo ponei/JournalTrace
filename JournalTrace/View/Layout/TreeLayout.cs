@@ -107,11 +107,6 @@ namespace JournalTrace.View.Layout
 
         }
 
-        private void TreeLayout_Resize(object sender, EventArgs e)
-        {
-
-        }
-
         private void datagDirectoryChanges_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             ContextMenuHelper.INSTANCE.ShowContext(datagDirectoryChanges, e);

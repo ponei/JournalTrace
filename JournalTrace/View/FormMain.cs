@@ -146,43 +146,6 @@ namespace JournalTrace
             }
         }
 
-        ILayout layoutType;
-        private void LoadLayout()
-        {
-            if (layoutType != null)
-            {
-                layoutType.Clean();
-                (layoutType as UserControl).Dispose();
-            }
-            foreach (ToolStripMenuItem item in layoutToolStripMenuItem.DropDownItems)
-            {
-                if (item.Checked)
-                {
-                    if (item == dataGridToolStripMenuItem)
-                    {
-                        layoutType = new GridLayout(entryManager);
-                    }
-                    if (item == directoryTreeToolStripMenuItem)
-                    {
-                        layoutType = new TreeLayout(entryManager);
-                    }
-
-                    break;
-                }
-            }
-
-            UserControl layoutControl = layoutType as UserControl;
-
-            LanguageManager.INSTANCE.AddLocalizableControls(layoutControl);
-
-            layoutControl.Location = new Point(0, 24);
-            layoutControl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            layoutControl.Size = new Size(Width - 16, Height - 80);
-
-            StatusVisibility(false);
-            Controls.Add(layoutControl);
-
-        }
 
         bool lastVisibility = true;
         private void StatusVisibility(bool v)
@@ -259,8 +222,6 @@ namespace JournalTrace
         }
         #endregion language
 
-
-
         #region layout (menu)
         bool ignoreLayoutChange = false;
         private void directoryTreeToolStripMenuItem_CheckStateChanged(object sender, EventArgs e)
@@ -321,8 +282,48 @@ namespace JournalTrace
             return i == 1;
         }
 
+
+        ILayout layoutType;
+        private void LoadLayout()
+        {
+            if (layoutType != null)
+            {
+                layoutType.Clean();
+                (layoutType as UserControl).Dispose();
+            }
+            foreach (ToolStripMenuItem item in layoutToolStripMenuItem.DropDownItems)
+            {
+                if (item.Checked)
+                {
+                    if (item == dataGridToolStripMenuItem)
+                    {
+                        layoutType = new GridLayout(entryManager);
+                    }
+                    if (item == directoryTreeToolStripMenuItem)
+                    {
+                        layoutType = new TreeLayout(entryManager);
+                    }
+
+                    break;
+                }
+            }
+
+            UserControl layoutControl = layoutType as UserControl;
+
+            LanguageManager.INSTANCE.AddLocalizableControls(layoutControl);
+
+            layoutControl.Location = new Point(0, 24);
+            layoutControl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            layoutControl.Size = new Size(Width - 16, Height - 80);
+
+            StatusVisibility(false);
+            Controls.Add(layoutControl);
+
+        }
+
         #endregion
 
+        #region grid contextmenu
         private void entryInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormEntryInfo frmInfo = new FormEntryInfo(entryManager, ContextMenuHelper.INSTANCE.GetCellUSN());
@@ -340,7 +341,9 @@ namespace JournalTrace
         {
             Process.Start("explorer.exe", ContextMenuHelper.INSTANCE.GetCellDirectory());
         }
+        #endregion
 
+        #region information (menu)
         FormInfo frmInfo;
         private void infoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -354,5 +357,6 @@ namespace JournalTrace
             LanguageManager.INSTANCE.AddLocalizableControls(frmInfo);
             frmInfo.Show();
         }
+        #endregion
     }
 }

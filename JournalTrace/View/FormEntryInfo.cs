@@ -80,11 +80,6 @@ namespace JournalTrace.View
             LanguageManager.INSTANCE.UpdateControl(datagFileIdentifiers);
         }
 
-        private void FormEntryInfo_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void datagFileIdentifiers_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             ContextMenuHelper.INSTANCE.ShowContext(datagFileIdentifiers, e, false);

@@ -71,20 +71,7 @@ namespace JournalTrace.View.Layout
                 datagJournalEntries.Columns[i].Width = widthColumns[i];
             }
 
-            ShowGrid(true);
             frm.ShowLayoutOption(true);
-        }
-
-        private void ShowGrid(bool v)
-        {
-            //lbStatusGrid.Visible = !v;
-            //progbarRows.Visible = !v;
-            //progbarAction.Visible = !v;
-            datagJournalEntries.Visible = v;
-        }
-
-        private void datagJournalEntries_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
         }
 
         private void btSearch_Click(object sender, EventArgs e)

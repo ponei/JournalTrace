@@ -34,31 +34,6 @@ namespace JournalTrace.Native
             USN_JOURNAL_ERROR = 17005
         }
 
-        public enum UsnReasonCode
-        {
-            USN_REASON_DATA_OVERWRITE = 0x00000001,
-            USN_REASON_DATA_EXTEND = 0x00000002,
-            USN_REASON_DATA_TRUNCATION = 0x00000004,
-            USN_REASON_NAMED_DATA_OVERWRITE = 0x00000010,
-            USN_REASON_NAMED_DATA_EXTEND = 0x00000020,
-            USN_REASON_NAMED_DATA_TRUNCATION = 0x00000040,
-            USN_REASON_FILE_CREATE = 0x00000100,
-            USN_REASON_FILE_DELETE = 0x00000200,
-            USN_REASON_EA_CHANGE = 0x00000400,
-            USN_REASON_SECURITY_CHANGE = 0x00000800,
-            USN_REASON_RENAME_OLD_NAME = 0x00001000,
-            USN_REASON_RENAME_NEW_NAME = 0x00002000,
-            USN_REASON_INDEXABLE_CHANGE = 0x00004000,
-            USN_REASON_BASIC_INFO_CHANGE = 0x00008000,
-            USN_REASON_HARD_LINK_CHANGE = 0x00010000,
-            USN_REASON_COMPRESSION_CHANGE = 0x00020000,
-            USN_REASON_ENCRYPTION_CHANGE = 0x00040000,
-            USN_REASON_OBJECT_ID_CHANGE = 0x00080000,
-            USN_REASON_REPARSE_POINT_CHANGE = 0x00100000,
-            USN_REASON_STREAM_CHANGE = 0x00200000,
-            USN_REASON_CLOSE = -1
-        }
-
         #endregion enum(s)
 
         #region private member variables
@@ -217,57 +192,6 @@ namespace JournalTrace.Native
 
            
             return usnRtnCode;
-        }
-
-        public bool
-            IsUsnJournalActive()
-        {
-            DateTime start = DateTime.Now;
-            bool bRtnCode = false;
-
-            if (bNtfsVolume)
-            {
-                if (_usnJournalRootHandle.ToInt32() != Win32Api.INVALID_HANDLE_VALUE)
-                {
-                    Win32Api.USN_JOURNAL_DATA usnJournalCurrentState = new Win32Api.USN_JOURNAL_DATA();
-                    UsnJournalReturnCode usnError = QueryUsnJournal(ref usnJournalCurrentState);
-                    if (usnError == UsnJournalReturnCode.USN_JOURNAL_SUCCESS)
-                    {
-                        bRtnCode = true;
-                    }
-                }
-            }
-            
-            return bRtnCode;
-        }
-
-        public bool
-            IsUsnJournalValid(Win32Api.USN_JOURNAL_DATA usnJournalPreviousState)
-        {
-            DateTime start = DateTime.Now;
-            bool bRtnCode = false;
-
-            if (bNtfsVolume)
-            {
-                if (_usnJournalRootHandle.ToInt32() != Win32Api.INVALID_HANDLE_VALUE)
-                {
-                    Win32Api.USN_JOURNAL_DATA usnJournalState = new Win32Api.USN_JOURNAL_DATA();
-                    UsnJournalReturnCode usnError = QueryUsnJournal(ref usnJournalState);
-
-                    if (usnError == UsnJournalReturnCode.USN_JOURNAL_SUCCESS)
-                    {
-                        if (usnJournalPreviousState.UsnJournalID == usnJournalState.UsnJournalID)
-                        {
-                            if (usnJournalPreviousState.NextUsn >= usnJournalState.NextUsn)
-                            {
-                                bRtnCode = true;
-                            }
-                        }
-                    }
-                }
-            }
-            
-            return bRtnCode;
         }
 
         #endregion public methods

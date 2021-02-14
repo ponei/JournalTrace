@@ -50,9 +50,7 @@
             this.datagJournalEntries.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.datagJournalEntries.Size = new System.Drawing.Size(704, 324);
             this.datagJournalEntries.TabIndex = 10;
-            this.datagJournalEntries.Visible = false;
             this.datagJournalEntries.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagJournalEntries_CellMouseDown);
-            this.datagJournalEntries.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagJournalEntries_ColumnHeaderMouseClick);
             // 
             // comboSearch
             // 

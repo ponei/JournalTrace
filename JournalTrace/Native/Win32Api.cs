@@ -28,11 +28,6 @@ namespace JournalTrace.Native
             ERROR_INVALID_USER_BUFFER = 1784
         }
 
-        public enum UsnJournalDeleteFlags
-        {
-            USN_DELETE_FLAG_DELETE = 1,
-            USN_DELETE_FLAG_NOTIFY = 2
-        }
 
         public enum FILE_INFORMATION_CLASS
         {
@@ -112,9 +107,6 @@ namespace JournalTrace.Native
         private const uint METHOD_NEITHER = 3;
         private const uint METHOD_BUFFERED = 0;
         private const uint FILE_ANY_ACCESS = 0;
-        private const uint FILE_SPECIAL_ACCESS = 0;
-        private const uint FILE_READ_ACCESS = 1;
-        private const uint FILE_WRITE_ACCESS = 2;
 
         public const uint USN_REASON_DATA_OVERWRITE = 0x00000001;
         public const uint USN_REASON_DATA_EXTEND = 0x00000002;
@@ -400,39 +392,7 @@ namespace JournalTrace.Native
             public ulong AllocationDelta;
         }
 
-        /// <summary>
-        /// MFT Enum Data structure, contains Start File Reference Number(64bits), Low USN(64bits),
-        /// High USN(64bits).
-        /// </summary>
-        [StructLayout(LayoutKind.Sequential, Pack = 1)]
-        public struct MFT_ENUM_DATA
-        {
-            public ulong StartFileReferenceNumber;
-            public long LowUsn;
-            public long HighUsn;
-        }
-
-        /// <summary>
-        /// Create USN Journal Data structure, contains Maximum Size(64bits) and Allocation Delta(64(bits).
-        /// </summary>
-        [StructLayout(LayoutKind.Sequential, Pack = 1)]
-        public struct CREATE_USN_JOURNAL_DATA
-        {
-            public ulong MaximumSize;
-            public ulong AllocationDelta;
-        }
-
-        /// <summary>
-        /// Create USN Journal Data structure, contains Maximum Size(64bits) and Allocation Delta(64(bits).
-        /// </summary>
-        [StructLayout(LayoutKind.Sequential, Pack = 1)]
-        public struct DELETE_USN_JOURNAL_DATA
-        {
-            public ulong UsnJournalID;
-            public uint DeleteFlags;
-            public uint Reserved;
-        }
-
+        
         /// </summary>
         public class UsnEntry
         {

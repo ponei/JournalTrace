@@ -66,7 +66,6 @@
             this.Controls.Add(this.treeUSNDirectories);
             this.Name = "TreeLayout";
             this.Size = new System.Drawing.Size(769, 358);
-            this.Resize += new System.EventHandler(this.TreeLayout_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.datagDirectoryChanges)).EndInit();
             this.ResumeLayout(false);
 
