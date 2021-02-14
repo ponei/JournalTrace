@@ -1,4 +1,5 @@
 ﻿using JournalTrace.Entry;
+using JournalTrace.Language;
 using JournalTrace.Native;
 using System;
 using System.Collections.Generic;
@@ -165,9 +166,12 @@ namespace JournalTrace.Entry
                 }
             }
 
+
+            string usnReasonsRaw = LanguageManager.INSTANCE.GetString("usnreasons");
+            string[] usnReasonsList = usnReasonsRaw.Split(new string[] { "," }, StringSplitOptions.None);
             foreach (var entry in USNEntries)
             {
-                entry.Value.ResolveInfo();
+                entry.Value.ResolveInfo(usnReasonsList);
             }
 
             //MessageBox.Show("c");

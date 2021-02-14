@@ -581,5 +581,14 @@ namespace JournalTrace.Language.Localization {
                 return ResourceManager.GetString("type", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Data overwrite,Data extend,Data truncation,Named data overwrite,Named data extend,Named data truncation,File create,File delete,EA Change,Security change,Rename: old name,Rename: new name,Indexable change,Basic info change,Hard link change,Compression change,Encryption change,Object ID change,Reparse point change,Stream change,Close.
+        /// </summary>
+        internal static string usnreasons {
+            get {
+                return ResourceManager.GetString("usnreasons", resourceCulture);
+            }
+        }
     }
 }

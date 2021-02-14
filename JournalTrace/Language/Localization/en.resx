@@ -291,4 +291,7 @@
   <data name="type" xml:space="preserve">
     <value>Type</value>
   </data>
+  <data name="usnreasons" xml:space="preserve">
+    <value>Data overwrite,Data extend,Data truncation,Named data overwrite,Named data extend,Named data truncation,File create,File delete,EA Change,Security change,Rename: old name,Rename: new name,Indexable change,Basic info change,Hard link change,Compression change,Encryption change,Object ID change,Reparse point change,Stream change,Close</value>
+  </data>
 </root>

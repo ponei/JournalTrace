@@ -581,5 +581,14 @@ namespace JournalTrace.Language.Localization {
                 return ResourceManager.GetString("type", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Substituição de dados,Extensão de dados,Truncagem de dados,Substituição de dados nomeados,Extensão de dados nomeados,Truncagem de dados nomeados,Criação de arquivo,Exclusão de arquivo,Alteração de EA,Alteração de segurança,Renomear: nome antigo,Renomear: novo nome,Alteração de indexável,Alteração de informações básicas,Alteração de link físico,Alteração de compressão,Alteração de criptografia,Alteração de ID de objeto,Alteração do ponto de nova análise,Alteração de fluxo,Fechar.
+        /// </summary>
+        internal static string usnreasons {
+            get {
+                return ResourceManager.GetString("usnreasons", resourceCulture);
+            }
+        }
     }
 }

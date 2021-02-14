@@ -23,7 +23,7 @@ namespace JournalTrace.Entry
                 //com a api, pegamos (se possivel) a entrada de cada diretorio
                 //se a entrada não existir mais, colocamos soemnte o id
                 string idPath = FileID.GetFilePath((long)ID);
-                if (String.IsNullOrWhiteSpace(idPath))
+                if (string.IsNullOrWhiteSpace(idPath))
                 {
                     resolvedID = null;
                 }

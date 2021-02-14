@@ -291,4 +291,7 @@
   <data name="type" xml:space="preserve">
     <value>Tipo</value>
   </data>
+  <data name="usnreasons" xml:space="preserve">
+    <value>Substituição de dados,Extensão de dados,Truncagem de dados,Substituição de dados nomeados,Extensão de dados nomeados,Truncagem de dados nomeados,Criação de arquivo,Exclusão de arquivo,Alteração de EA,Alteração de segurança,Renomear: nome antigo,Renomear: novo nome,Alteração de indexável,Alteração de informações básicas,Alteração de link físico,Alteração de compressão,Alteração de criptografia,Alteração de ID de objeto,Alteração do ponto de nova análise,Alteração de fluxo,Fechar</value>
+  </data>
 </root>
