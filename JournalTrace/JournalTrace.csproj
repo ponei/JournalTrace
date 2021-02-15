@@ -65,11 +65,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>pt.resx</DependentUpon>
     </Compile>
-    <Compile Include="View\FormInfo.cs">
+    <Compile Include="View\Info\FormInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormInfo.Designer.cs">
+    <Compile Include="View\Info\FormInfo.Designer.cs">
       <DependentUpon>FormInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Info\UserSocialMedia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Info\UserSocialMedia.Designer.cs">
+      <DependentUpon>UserSocialMedia.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Util\ContextMenuHelper.cs" />
     <Compile Include="View\FormDrive.cs">
@@ -125,7 +131,7 @@
     <EmbeddedResource Include="View\FormEntryInfo.resx">
       <DependentUpon>FormEntryInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormInfo.resx">
+    <EmbeddedResource Include="View\Info\FormInfo.resx">
       <DependentUpon>FormInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormMain.resx">
@@ -139,7 +145,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Info\UserSocialMedia.resx">
+      <DependentUpon>UserSocialMedia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Layout\GridLayout.resx">
       <DependentUpon>GridLayout.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +170,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\github.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dreamincode.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

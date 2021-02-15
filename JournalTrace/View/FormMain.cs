@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using JournalTrace.View.Util;
 using System.Diagnostics;
+using JournalTrace.View.Info;
 
 namespace JournalTrace
 {

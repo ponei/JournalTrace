@@ -186,8 +186,17 @@
   <data name="language" xml:space="preserve">
     <value>Language</value>
   </data>
+  <data name="lordyzagatdesc" xml:space="preserve">
+    <value>Idea for the project, translated reasons</value>
+  </data>
   <data name="name" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="nolandesc" xml:space="preserve">
+    <value>OpenByFileId Win32 API wrapper for C#</value>
+  </data>
+  <data name="poneidesc" xml:space="preserve">
+    <value>Main developer</value>
   </data>
   <data name="reason" xml:space="preserve">
     <value>Reason</value>
@@ -203,6 +212,9 @@
   </data>
   <data name="select" xml:space="preserve">
     <value>Select</value>
+  </data>
+  <data name="skipperdesc" xml:space="preserve">
+    <value>NTFS UsnJournal Win32 API wrapper for C#</value>
   </data>
   <data name="statusdesc-1" xml:space="preserve">
     <value>The program couldn't create a handle to the selected drive, to query the current journal state.</value>

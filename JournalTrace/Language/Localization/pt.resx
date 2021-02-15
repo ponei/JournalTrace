@@ -186,8 +186,17 @@
   <data name="language" xml:space="preserve">
     <value>Lingua</value>
   </data>
+  <data name="lordyzagatdesc" xml:space="preserve">
+    <value>Ideia para o projeto, traduziu razões</value>
+  </data>
   <data name="name" xml:space="preserve">
     <value>Nome</value>
+  </data>
+  <data name="nolandesc" xml:space="preserve">
+    <value>OpenByFileId Win32 API compatibilização para C#</value>
+  </data>
+  <data name="poneidesc" xml:space="preserve">
+    <value>Desenvolvedor principal</value>
   </data>
   <data name="reason" xml:space="preserve">
     <value>Razão</value>
@@ -203,6 +212,9 @@
   </data>
   <data name="select" xml:space="preserve">
     <value>Selecionar</value>
+  </data>
+  <data name="skipperdesc" xml:space="preserve">
+    <value>NTFS UsnJournal Win32 API compatibilização para C#</value>
   </data>
   <data name="statusdesc-1" xml:space="preserve">
     <value>O programa não conseguiu manejar o disco selecionado, para consultar o estado atual do journal.</value>

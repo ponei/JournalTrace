@@ -268,11 +268,38 @@ namespace JournalTrace.Language.Localization {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Idea for the project, translated reasons.
+        /// </summary>
+        internal static string lordyzagatdesc {
+            get {
+                return ResourceManager.GetString("lordyzagatdesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Name.
         /// </summary>
         internal static string name {
             get {
                 return ResourceManager.GetString("name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a OpenByFileId Win32 API wrapper for C#.
+        /// </summary>
+        internal static string nolandesc {
+            get {
+                return ResourceManager.GetString("nolandesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Main developer.
+        /// </summary>
+        internal static string poneidesc {
+            get {
+                return ResourceManager.GetString("poneidesc", resourceCulture);
             }
         }
         
@@ -318,6 +345,15 @@ namespace JournalTrace.Language.Localization {
         internal static string select {
             get {
                 return ResourceManager.GetString("select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a NTFS UsnJournal Win32 API wrapper for C#.
+        /// </summary>
+        internal static string skipperdesc {
+            get {
+                return ResourceManager.GetString("skipperdesc", resourceCulture);
             }
         }
         
